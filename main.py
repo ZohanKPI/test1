@@ -19,3 +19,10 @@ with open('test.txt', "r") as file:
             s+= int(line.rstrip())
 """
 print(timeit.timeit(s, number = 1))
+k = """
+s = 0
+with open('test.txt, "r") as file:
+    s = sum((int(line.strip()) for line in file if line.strip().isdigit()))
+"""
+
+print(timeit.timeit(s, number = 1))
